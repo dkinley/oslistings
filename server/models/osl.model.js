@@ -22,8 +22,13 @@ const OslSchema = new mongoose.Schema({
         required: [ true, "You must input a valid five digit zipcode"],  //true - this is a required field, the 2nd part is the requirement
         minlength: [5, "Zipcode must be five digits"],
     },
-    zestimate: {
+    price: {
         type: Number,
+        required: [ true, "You must input a number, input zero if not known"],  //true - this is a required field, the 2nd part is the requirement
+        minlength: [1, "You must input a number, input zero if not known"],
+    },
+    description: {
+        type: String,
         required: [ false, ],
     },
 },
