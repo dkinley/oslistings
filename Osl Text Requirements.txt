@@ -1,0 +1,22 @@
+﻿Dirk Kinley’s Solo Project
+
+
+Feature list :
+   * need-to-haves
+      * Registration
+         * Field of validations
+            * Valid email address
+            * Valid name
+            * Pick Values from a combobox
+      * Login
+         * Check for valid registration
+      * Property opportunity grid
+         * CREATE : Create a new property opportunity
+         * READ : View all in a date sorted list, most recent at top
+         * UPDATE : Allow users to freely update opportunities that are theirs (only)
+      * Ability to view and then DELETE opportunities
+   * nice-to-haves
+      * Have properties pictures
+      * Have a link to the location (googlemap) of property
+Description : This is a real estate opportunities messaging board used to communicate, in a timely manner, mostly off-market opportunities among highly active real estate professionals. I am an active real estate broker who is, what I hope, one of the target user demographics.
+Github repo: dkinley/oslistings
