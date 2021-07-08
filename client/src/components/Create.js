@@ -111,35 +111,35 @@ const Create = (props) => {
         />
 
     </div>
-                <div>
-                    <label> Description: </label>
-                    {
-                        errs.description ?
-                        <span className="error-text">{errs.description.message}</span>
-                            : null
-                    }
-                    <input type="text"
-                    name="description"
-                    value={description}
-                    onChange={ (e) => setDescription( e.target.value ) }
-                    />
+            <div>
+                <label> Description: </label>
+                {
+                    errs.description ?
+                    <span className="error-text">{errs.description.message}</span>
+                        : null
+                }
+                <input type="text"
+                name="description"
+                value={description}
+                onChange={ (e) => setDescription( e.target.value ) }
+                />
 
-                </div>
-                <div>
-                    <input type="checkbox"
-                    name="favorite"
-                    checked={favorite}
-                    onChange={ () => setFavorite( !favorite ) }
-                    />
-                    <label> Favorite? </label>
-                </div>
+            </div>
+            <div>
+                <input type="checkbox"
+                name="favorite"
+                checked={favorite}
+                onChange={ () => setFavorite( !favorite ) }
+                />
+                <label> Favorite? </label>
+            </div>
 
-                <div>
-                <button type="submit">Add Opportunity</button>
-                <button onClick={ () => navigate("/osl")}>Cancel</button>
-                </div>
-            </form>
-        </div>
+            <div>
+            <button type="submit">Add Opportunity</button>
+            <button onClick={ () => navigate("/osl")}>Cancel</button>
+            </div>
+        </form>
+    </div>
     )
 };
 
