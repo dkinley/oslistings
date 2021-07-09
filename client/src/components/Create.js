@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link, navigate } from '@reach/router';
+import React, { useState } from 'react';
+import { navigate } from '@reach/router';
 import axios from 'axios';
 
 const Create = (props) => {
@@ -8,9 +8,9 @@ const Create = (props) => {
     const [ city, setCity ] = useState();
     const [ state, setState ] = useState();
     const [ zipcode, setZipcode ] = useState();
-    const [ price, setPrice ] = useState(0);
+    const [ price, setPrice ] = useState();
     const [ description, setDescription ] = useState({});
-    
+    const [ errs, setErrs ] = useState({});
 
     const submitHandler = (e) => {
         e.preventDefault(); //bring in the event with 'e' and prevent default refresh
@@ -90,7 +90,7 @@ const Create = (props) => {
                 <span className="error-text">{errs.zipcode.message}</span>
                     : null
             }
-            <input type="text"
+            <input type="number"
             name="zipcode"
             value={zipcode}
             onChange={ (e) => setZipcode( e.target.value ) }
@@ -104,7 +104,7 @@ const Create = (props) => {
             <span className="error-text">{errs.price.message}</span>
                 : null
         }
-        <input type="text"
+        <input type="number"
         name="price"
         value={price}
         onChange={ (e) => setPrice( e.target.value ) }
@@ -124,17 +124,6 @@ const Create = (props) => {
                 onChange={ (e) => setDescription( e.target.value ) }
                 />
 
-            </div>
-            <div>
-                <input type="checkbox"
-                name="favorite"
-                checked={favorite}
-                onChange={ () => setFavorite( !favorite ) }
-                />
-                <label> Favorite? </label>
-            </div>
-
-            <div>
             <button type="submit">Add Opportunity</button>
             <button onClick={ () => navigate("/osl")}>Cancel</button>
             </div>
