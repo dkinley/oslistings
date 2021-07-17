@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const db_name = "osl"; // grabbed library and created a convenience variable "db_name"
+const db_name = process.env.DB_Name; // grabbed library and created a convenience variable "db_name"
 
 mongoose.connect("mongodb://localhost/" + db_name, {
 	useNewUrlParser: true,

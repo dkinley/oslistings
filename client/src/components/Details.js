@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import { Link, navigate } from '@reach/router';
 import axios from 'axios';
 import DeleteButton from './DeleteButton';
+import { Link, navigate } from '@reach/router';
 
 const Details = (props) => {
     const [ osl, setOsl ] = useState({});
@@ -71,6 +72,8 @@ const Details = (props) => {
                 </tr>
             </table>
             <DeleteButton _id={ osl._id }/>
+            <Link to={ `/osl/${osl._id}/edit`}><button>Edit</button></Link>
+            <Link to={ `/`}><button>Back to All Opportunities</button></Link>
         </div>
     )
 };

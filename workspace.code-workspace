@@ -1,19 +1,10 @@
 {
 	"folders": [
 		{
+			"path": "../../../web-fundamentals/0419-exam-dirk-kinley"
+		},
+		{
 			"path": "."
-		},
-		{
-			"path": "../0619-lit"
-		},
-		{
-			"path": "../0618-author"
-		},
-		{
-			"path": "../0615-product"
-		},
-		{
-			"path": "../../0609-karaoke"
 		}
 	]
 }

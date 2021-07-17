@@ -1,3 +1,4 @@
+require("dotenv").config(); //load up all key values into memory, can access through an object called process.env 
 const express = require ('express');
 const app = express ();
 const cors = require('cors');
@@ -14,4 +15,5 @@ require('./routes/osl.routes')(app);
 // const oslRoutes = require('./routes/osl.routes');
 // oslRoutes(app);
 
-app.listen(port, () => console.log("Listening on port:  " + port));
+app.listen(process.env.MY_PORT, () => {
+    console.log("Listening on port:  " + process.env.MY_PORT)});

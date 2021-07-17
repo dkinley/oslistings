@@ -25,7 +25,6 @@ const OslSchema = new mongoose.Schema({
     price: {
         type: Number,
         required: [ true, "You must input a number, input zero if not known"],  //true - this is a required field, the 2nd part is the requirement
-        minlength: [1, "You must input a number, input zero if not known"],
     },
     description: {
         type: String,

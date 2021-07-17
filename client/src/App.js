@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <GetAll path="/osl" />
+        <GetAll path="/" />
         <Create path="/osl/create" />
         <Edit path="/osl/:id/edit" />
         <Details path="/osl/:id"/> 

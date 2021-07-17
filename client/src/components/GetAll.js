@@ -22,7 +22,9 @@ const GetAll = (props) => {
         <div>
             <table>
                 <thead>
-                    <th>Opportunity Info</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Price</th>
                     <th>Actions Available</th>
                 </thead>
                 <tbody>
@@ -30,10 +32,15 @@ const GetAll = (props) => {
                         allOsl.map((osl, index) => (
                         <tr>
                             <td>
-                                <Link to={ `/osl/${osl._id}`} >{osl.name} </Link>
+                                <Link to={ `/osl/${osl._id}`} >{osl.street} </Link>
                             </td>
                             <td>
-                            <DeleteButton _id={ osl._id }/>
+                            <p>{osl.city} </p>
+                            </td>
+                            <td>
+                            <p>{osl.price} </p>
+                            </td>
+                            <td>
                                 <Link to={ `/osl/${osl._id}/edit`}><button>Edit</button></Link>
                             </td>
                         </tr>
@@ -41,6 +48,7 @@ const GetAll = (props) => {
                     }
                 </tbody>
             </table>
+            <Link to={ `/osl/create`}><button>Add New Opportunity</button></Link>
         </div>
     )
 };

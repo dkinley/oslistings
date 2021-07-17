@@ -20,6 +20,7 @@ const Create = (props) => {
             city: city,
             state: state,
             zipcode: zipcode,
+            price: price,
             description: description,
             }) //axios sends data, use postman url, add .then, .catch
             .then((res) => {
