@@ -11,6 +11,8 @@ app.use(cors());
 require('./config/mongoose.config');
 
 require('./routes/osl.routes')(app);
+require('./routes/user.routes')(app);
+
 // saying 'get me the function and run it at the same time', another way to write this is:
 // const oslRoutes = require('./routes/osl.routes');
 // oslRoutes(app);

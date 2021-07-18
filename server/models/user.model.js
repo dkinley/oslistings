@@ -25,7 +25,7 @@ UserSchema.virtual("confirmPassword")
     .set((value) => this._confirmPassword = value);
 
 UserSchema.pre("validate", function(next){
-    if(this.password !== this._confirmPassword) {
+    if(this.password !== this.confirmPassword) {
     this.invalidate("confirmPassword", "Passwords didn't match. Please retype them.")
     }
 
