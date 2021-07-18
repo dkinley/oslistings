@@ -6,7 +6,12 @@ const port = 8000;
 
 app.use(express.json());
 app.use(express.urlencoded( { extended : true} ) );
-app.use(cors());
+
+//when using credentials and cookies we need to add configurations to cors
+app.use(cors({
+    credentials: true,
+    origin: "http://localhost:3000",
+}));
 
 require('./config/mongoose.config');
 
