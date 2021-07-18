@@ -2,6 +2,8 @@ require("dotenv").config(); //load up all key values into memory, can access thr
 const express = require ('express');
 const app = express ();
 const cors = require('cors');
+// need to be able to read cookies, we need our cookie parser library loaded
+const cookieParser = require('cookie-parser');
 const port = 8000;
 
 app.use(express.json());
@@ -12,6 +14,8 @@ app.use(cors({
     credentials: true,
     origin: "http://localhost:3000",
 }));
+
+app.use(cookieParser());
 
 require('./config/mongoose.config');
 
