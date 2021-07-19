@@ -30,11 +30,14 @@ const Create = (props) => {
                 }
                 else {
                     console.log(res.data)
-                    navigate("/osl");
+                    navigate("/");
                 }
             })
             .catch((err) => {
-                console.log(err)
+                console.log(err.response.status); //on failure, saving the errors in state so user can correct them
+                if(err.response.status === 401) {
+                    navigate("/loginRegister");
+                }
             })
     }
 

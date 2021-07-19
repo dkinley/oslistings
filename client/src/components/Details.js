@@ -16,7 +16,7 @@ const Details = (props) => {
             .catch((err) => {
                 console.log(err);
             });
-        }, [props.id ]);
+        }, [props.id]); //could try putting 'props.id' in array 
 
     return (
         <div>
@@ -71,7 +71,7 @@ const Details = (props) => {
                 </td>
                 </tr>
             </table>
-            <DeleteButton _id={ osl._id }/>
+            <DeleteButton id={ osl._id }/>
             <Link to={ `/osl/${osl._id}/edit`}><button>Edit</button></Link>
             <Link to={ `/`}><button>Back to All Opportunities</button></Link>
         </div>
