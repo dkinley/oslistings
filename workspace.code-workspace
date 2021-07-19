@@ -1,10 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "../../../web-fundamentals/0419-exam-dirk-kinley"
+			"path": "."
 		},
 		{
-			"path": "."
+			"path": "../0615-product"
+		},
+		{
+			"path": "../../0717-Complete-Course-Code-KU/mern_may_2021-main/w8d1/movie_db"
 		}
 	]
 }

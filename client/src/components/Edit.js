@@ -56,7 +56,7 @@ const Edit = (props) => {
 
     return (
         <div>
-            <h1>Edit Opportunity</h1> 
+            <h2>Edit</h2> 
             <form onSubmit={submitHandler}>
                 <div>
                     <label> Street Address: </label>
@@ -138,7 +138,7 @@ const Edit = (props) => {
                 </div>
                 <div>
                 <button type="submit">Update Opportunity</button>
-                <button onClick={ () => navigate("/osl")}>Cancel</button>
+                <button onClick={ () => navigate("/")}>Cancel</button>
                 </div>
             </form>
         </div>

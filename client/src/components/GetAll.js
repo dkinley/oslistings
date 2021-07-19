@@ -25,7 +25,7 @@ const GetAll = (props) => {
                     <th>Address</th>
                     <th>City</th>
                     <th>Price</th>
-                    <th>Actions Available</th>
+                    <th>Edit</th>
                 </thead>
                 <tbody>
                     {

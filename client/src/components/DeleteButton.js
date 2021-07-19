@@ -5,21 +5,26 @@ import { navigate } from '@reach/router';
 const DeleteButton = (props) => {
     console.log("Delete Button is being called!")
     console.log(props.id);
-    const [ oslId, setOslId ] = useState (props.id);
-    const deleteOsl = (oslId) => {
-        axios.delete(`http://localhost:8000/api/osl/${ oslId }`)
-            .then((res) => {
-                console.log(res.data);
-                // e.g. setAllSongs(allSongs.filter((songElement) => songElement._id !== songID))
-                // need to fix to refresh post delete: props.allOsl && props.setAllOsl(props.allOsl.filter((osl) => osl._id !== oslId))
-                navigate('/');
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    }
+    const { id, afterDeleteHandler } = props;
+
+    const deleteHandler = (e, id) => {
+		e.preventDefault();
+
+        axios.delete("http://localhost:8000/api/osl/" + id)
+        .then((res) => {
+            console.log(res.data);
+            afterDeleteHandler(id);  // unique things that the parent component wants to do now!
+        })
+        .catch((err) => {
+            console.log(err);
+            if(err.response.status === 401) {
+                navigate("/loginRegister")
+            }
+        })
+}
+
     return (
-        <button onClick={ () => deleteOsl(props.id) }>Delete</button>
+        <button className="deleteBtn" onClick={ (e) => deleteHandler(e, id) }>Delete Opportunity</button>
     )
 }
 

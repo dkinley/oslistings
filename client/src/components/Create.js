@@ -129,7 +129,7 @@ const Create = (props) => {
                 />
 
             <button type="submit">Add Opportunity</button>
-            <button onClick={ () => navigate("/osl")}>Cancel</button>
+            <button onClick={ () => navigate("/")}>Cancel</button>
             </div>
         </form>
     </div>

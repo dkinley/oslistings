@@ -20,7 +20,7 @@ const Details = (props) => {
 
     return (
         <div>
-            <h1>Opportunity Details</h1>
+            <h2>Details</h2>
             <table>
                 <tr>
                 <td>

@@ -9,6 +9,7 @@ import LogReg from './views/LogReg';
 function App() {
   return (
     <div className="App">
+      <h1>PROP-ORTUNITIES</h1>
       <Router>
         <GetAll path="/" />
         <Create path="/osl/create" />
