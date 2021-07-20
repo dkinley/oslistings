@@ -68,7 +68,7 @@ module.exports = {
     delete: (req, res) => {  //need ID to delete one single record
         console.log(req.params.id); //express gives us params, which will have ID
         
-        Lit.findByIdAndDelete(req.params.id) // no {} as it is already an object, the req (request) is already an object
+        Osl.findByIdAndDelete(req.params.id) // no {} as it is already an object, the req (request) is already an object
             .then((deletedOsl) => {  //this is getting one
                 console.log(deletedOsl);
                 res.json(deletedOsl);

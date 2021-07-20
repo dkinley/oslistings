@@ -43,7 +43,7 @@ const Create = (props) => {
 
     return (
         <div>
-            <h1>New Opportunity</h1> 
+            <h2>New</h2> 
             <form onSubmit={submitHandler}>
                 <div>
                     <label> Street: </label>

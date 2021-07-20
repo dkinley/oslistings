@@ -7,5 +7,5 @@ module.exports = (app) => { // need the express server app to
     app.post('/api/osl', OslController.create);
     app.get('/api/osl/:id', OslController.details); //creates a param id called 'id', this can be used in the controller
     app.put('/api/osl/:id', OslController.edit);
-    app.delete('/api/osl/:id', OslController.delete);
+    app.delete('/api/osl/delete/:id', OslController.delete);
 } 
